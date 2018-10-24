@@ -2,7 +2,7 @@
 
 use wpscholar\WordPress\FeatureSupport;
 
-if ( defined( 'add_action' ) ) {
+if ( function_exists( 'add_action' ) ) {
 
 	// Automatically register features for custom taxonomies
 	add_action( 'registered_taxonomy', function ( $taxonomy, $object_type, $args ) {
@@ -21,7 +21,7 @@ if ( defined( 'add_action' ) ) {
 
 }
 
-if ( ! defined( 'taxonomy_supports' ) ) {
+if ( ! function_exists( 'taxonomy_supports' ) ) {
 
 	/**
 	 * Check if a taxonomy supports a specific feature.
@@ -39,7 +39,7 @@ if ( ! defined( 'taxonomy_supports' ) ) {
 
 }
 
-if ( ! defined( 'add_taxonomy_support' ) ) {
+if ( ! function_exists( 'add_taxonomy_support' ) ) {
 
 	/**
 	 * Add support for a specific feature to a taxonomy.
@@ -54,7 +54,7 @@ if ( ! defined( 'add_taxonomy_support' ) ) {
 
 }
 
-if ( ! defined( 'remove_taxonomy_support' ) ) {
+if ( ! function_exists( 'remove_taxonomy_support' ) ) {
 
 	/**
 	 * Remove support for a specific feature from a taxonomy.
@@ -69,7 +69,7 @@ if ( ! defined( 'remove_taxonomy_support' ) ) {
 
 }
 
-if ( ! defined( 'get_all_taxonomy_supports' ) ) {
+if ( ! function_exists( 'get_all_taxonomy_supports' ) ) {
 
 	/**
 	 * Get all features supported by a taxonomy.
@@ -86,7 +86,7 @@ if ( ! defined( 'get_all_taxonomy_supports' ) ) {
 
 }
 
-if ( ! defined( 'get_taxonomies_by_support' ) ) {
+if ( ! function_exists( 'get_taxonomies_by_support' ) ) {
 
 	/**
 	 * Get all taxonomies that support a specific feature.
